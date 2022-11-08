@@ -1,0 +1,16 @@
+---
+title: This is the home page
+colors:
+- red
+- blue
+- green
+---
+
+<!-- Path: layout.njk -->
+<h1>{{ title }}</h1>
+<p>This is a generated page</p>
+<ul>
+    {% for entry in collections.blog %}
+    <li><a href="{{ entry.url }}">{{ entry.data.title }}</a></li>
+    {% endfor %}
+</ul>
